@@ -58,3 +58,7 @@ create view dim_test_ticket_25900_2.tables_vw as
   join pg_class on pg_class.oid = stv_tbl_perm.id
   join pg_namespace on pg_namespace.oid = relnamespace
   join pg_database on pg_database.oid = stv_tbl_perm.db_id;
+
+
+-- 現在のトランザクションで発生しているすべてのロックを表示
+select table_id, last_update, lock_owner, lock_owner_pid from stv_locks;
