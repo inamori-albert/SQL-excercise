@@ -62,3 +62,6 @@ create view dim_test_ticket_25900_2.tables_vw as
 
 -- 現在のトランザクションで発生しているすべてのロックを表示
 select table_id, last_update, lock_owner, lock_owner_pid from stv_locks;
+
+-- ユーザー自身が所有するセッションを終了
+select pg_terminate_backend(終了するセッションのプロセス ID); 
