@@ -49,7 +49,7 @@ ORDER BY starttime DESC
 LIMIT 20;
 
 -- テーブルidとdb名,schema名,テーブル名を表示
-create view dim_test_ticket_25900_2.tables_vw as
+create view tables_vw as
   select distinct(id) table_id
     ,trim(datname)   db_name
     ,trim(nspname)   schema_name
