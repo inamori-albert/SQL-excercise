@@ -22,7 +22,7 @@ from stv_recents
 where status='Running';
 
 # 実行中クエリをキャンセル
-cancel (キャンセルしたいクエリのプロセスID);
+cancel キャンセルしたいクエリのプロセスID;
 
 
 # s3からのcopy処理エラーログを確認
